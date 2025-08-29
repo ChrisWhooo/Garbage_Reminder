@@ -8,7 +8,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 SMTP_SERVER = "localhost"
 SMTP_PORT = 25
 SENDER_EMAIL = "wuhan6582@gmail.com"
-RECEIVER_EMAILS = ["wuhan6582@gmail.com"]
+RECEIVER_EMAILS = ["wuhan6582@gmail.com","chriscavendish01@gmail.com"]
 
 GARBAGE_SCHEDULE = {
     "Sunday": "資源ごみ",

@@ -2,30 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{subject}}</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 30px;
+      border-top: 5px solid #2d89ef;
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+    }
+    .header h2 {
+      color: #2d89ef;
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .content p {
+      font-size: 16px;
+      color: #333333;
+      margin: 0 0 15px 0;
+      text-align: center;
+    }
+    .highlight {
+      color: #ff5722;
+      font-weight: bold;
+    }
+    .callout {
+      background-color: #e6f7ff;
+      border-left: 4px solid #1890ff;
+      padding: 15px;
+      margin: 25px 0;
+      text-align: center;
+      font-size: 15px;
+      color: #1890ff;
+      border-radius: 4px;
+    }
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888888;
+    }
+    .footer p {
+        margin: 0;
+    }
+    .footer a {
+      color: #2d89ef;
+      text-decoration: none;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+<body>
 
-  <div style="max-width: 600px; margin: auto; background: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <div class="container">
     
-    <h2 style="text-align: center; color: #2d89ef;">Garbage Collection Reminder</h2>
-
-    <p style="font-size: 16px; text-align: center;">
-      Hello, <strong>Chris</strong>!<br>
-      Tomorrow is <strong style="color: #ff5722;">{{date}} {{garbage_type}}</strong> collection day! Please prepare your garbage for recycling in advance.
-    </p>
-
-    <div style="margin-top: 20px; text-align: center;">
-      <strong>Collection Date:</strong> <span style="color: #008000;">{{date}}</span>
+    <div class="header">
+      <h2>Garbage Collection Reminder</h2>
     </div>
 
-    <p style="text-align: center; font-size: 14px; color: #666;">
-      Please follow your local garbage separation rules to ensure proper disposal!<br> 
-      Thank you for your contribution to environmental protection!
-    </p>
+    <div class="content">
+      <p>Hello, <strong>Chris</strong>!</p>
+      <p>Tomorrow is <strong class="highlight">{{date}} {{garbage_type}}</strong> collection day!</p>
+      <div class="callout">
+        Please prepare your garbage for recycling in advance.
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Please follow your local garbage separation rules to ensure proper disposal!</p>
+      <p>Thank you for your contribution to environmental protection!</p>
+    </div>
     
   </div>
 
 </body>
 </html>
-
