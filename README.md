@@ -50,14 +50,18 @@ GARBAGE_SCHEDULE = {
     "Friday": "燃えるゴミ"
 }
 ```
-5. Run the script
+5. Run the script in background
 ```bash
-python3 auto_reminder.py
+nohup python3 auto_reminder.py > reminder.log 2>&1 &
 ```
-🧪 Test It Immediately
+6. Stop the script
 ```bash
-python3 auto_reminder.py test
+ps aux | grep python
+kill -9 <PID>
 ```
+
+---
+
 ## 📁 Project Structure
 ```bash
 Garbage_Reminder/
@@ -66,3 +70,13 @@ Garbage_Reminder/
 ├── requirements.txt         # Python dependencies
 └── README.md     
 ```
+
+---
+
+## 🧪 Test It Immediately
+```bash
+python3 auto_reminder.py test
+```
+
+
+
