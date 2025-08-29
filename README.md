@@ -30,3 +30,38 @@ This script checks the garbage collection schedule and sends a reminder email th
 git clone https://github.com/ChrisWhooo/Garbage_Reminder.git
 cd Garbage_Reminder
 
+2.Install python dependencies
+```bash
+pip install -r requirements.txt
+
+3. Set your mail inside the script
+
+SENDER_EMAIL = "your@email.com"
+RECEIVER_EMAILS = ["target1@example.com", "target2@example.com"]
+SMTP_SERVER = "your.smtp.server"
+SMTP_PORT = 25
+
+4. Customise your garbage schedule
+
+GARBAGE_SCHEDULE = {
+    "Sunday": "資源ごみ",
+    "Tuesday": "燃えるゴミ",
+    "Thursday": "プラスチック",
+    "Friday": "燃えるゴミ"
+}
+
+5. Run the script
+
+python3 auto_reminder.py
+
+🧪 Test It Immediately
+
+python3 auto_reminder.py test
+
+📁 Project Structure
+Garbage_Reminder/
+├── auto_reminder.py         # Main script
+├── garbage_template.html    # Email HTML template
+├── requirements.txt         # Python dependencies
+└── README.md                # This file
+
