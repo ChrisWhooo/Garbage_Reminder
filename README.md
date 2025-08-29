@@ -30,5 +30,3 @@ This script checks the garbage collection schedule and sends a reminder email th
 git clone https://github.com/ChrisWhooo/Garbage_Reminder.git
 cd Garbage_Reminder
 
-
-
