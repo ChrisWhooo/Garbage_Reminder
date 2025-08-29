@@ -29,7 +29,7 @@ This script checks the garbage collection schedule and sends a reminder email th
 ```bash
 git clone https://github.com/ChrisWhooo/Garbage_Reminder.git
 cd Garbage_Reminder
-
+`
 2.Install python dependencies
 ```bash
 pip install -r requirements.txt
