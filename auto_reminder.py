@@ -78,8 +78,9 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "test":
         tomorrow = datetime.datetime.now() + datetime.timedelta(days=1)
         weekday_name = tomorrow.strftime('%A')
-        if weekday_name in GARBAGE_SCHEDULE:
-            garbage_type = GARBAGE_SCHEDULE[weekday_name]
+        today = datetime.datetime.now().strftime('%A')
+        if today in GARBAGE_SCHEDULE:
+            garbage_type = GARBAGE_SCHEDULE[today]
             content = generate_html(garbage_type)
             send_html_email(f"[TEST] Garbage Reminder - {garbage_type}", content)
         else:
